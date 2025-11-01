@@ -1,0 +1,23 @@
+{
+  "name": "audit",
+  "version": "1.0.0",
+  "description": "auditing backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "author": "Pratham Jain",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.38.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
