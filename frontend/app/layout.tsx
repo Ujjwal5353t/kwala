@@ -1,5 +1,5 @@
 import "./globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { StarknetProvider } from "@/components/providers/Starknet"; 
 
@@ -13,9 +13,11 @@ export default function RootLayout({
       <body className="antialiased">
         <div vaul-drawer-wrapper="" className="bg-background">
           <StarknetProvider>
-            <SidebarProvider>
+            <SidebarProvider defaultOpen={false}>
               <AppSidebar />
-              {children}
+              <SidebarInset>
+                {children}
+              </SidebarInset>
             </SidebarProvider>
           </StarknetProvider>
         </div>

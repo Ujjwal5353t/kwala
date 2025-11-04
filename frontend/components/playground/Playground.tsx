@@ -131,7 +131,7 @@ export default function Playground() {
   // Custom edge styles
   const edgeStyles = {
     default: {
-      stroke: '#555',
+      stroke: '#999',
       strokeWidth: 2,
       transition: 'stroke 0.3s, stroke-width 0.3s',
     },
@@ -147,12 +147,9 @@ export default function Playground() {
   }, [])
 
   return (
-    <div className="flex h-screen bg-[#f9f7f3] text-black pt-8 selectable-none relative">
-      {/* Main canvas area */}
-      {/* h Sidebar */}
-      <div className='absolute z-10 left-10 my-20 h-auto max-h-72'>
-        <FloatingSidebar addBlock={addBlock} />
-      </div>
+    <div className="flex h-screen bg-[#1a1a1a] text-white pt-8 selectable-none relative">
+      {/* Floating Sidebar - Now fixed positioned & draggable */}
+      <FloatingSidebar addBlock={addBlock} />
 
       <motion.div
         className="flex-1 w-full flex flex-col ml-8"
@@ -165,7 +162,7 @@ export default function Playground() {
         {/* Canvas */}
         <div
           id="block-canvas"
-          className="flex-1 rounded-lg shadow-inner p-4 min-h-[200px]  overflow-hidden bg-transparent"
+          className="flex-1 rounded-lg shadow-inner p-4 min-h-[200px] overflow-hidden bg-[#0f0f0f]"
         >
           <ReactFlow
             nodes={nodes}

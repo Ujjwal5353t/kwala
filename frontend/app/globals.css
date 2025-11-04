@@ -108,12 +108,26 @@ body {
   @apply hover:scale-110 transition-all duration-300;
 }
 
-/* Add this CSS to your global stylesheet or a CSS module */
+/* Custom scrollbar styling for floating sidebar */
 .custom-scrollbar {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

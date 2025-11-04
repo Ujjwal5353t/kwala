@@ -11,7 +11,7 @@ export default function Header({ showClearButton, showFinishButton, handleClear,
     const showDeleteButton = !!selectedNode;
 
     return (
-        <div className="flex justify-between items-center m-4">
+        <div className="flex justify-between items-center m-4 bg-[#252525] rounded-lg p-4">
             <div className="flex items-center gap-4 ml-8">
                 {isEditing ? (
                     <input
@@ -20,11 +20,11 @@ export default function Header({ showClearButton, showFinishButton, handleClear,
                         onChange={(e) => setText(e.target.value)}
                         onBlur={() => setIsEditing(false)}
                         onKeyDown={(e) => e.key === "Enter" && setIsEditing(false)}
-                        className="text-2xl text-black font-semibold bg-transparent outline-none border-b border-white"
+                        className="text-2xl text-white font-semibold bg-transparent outline-none border-b border-gray-400"
                         autoFocus
                     />
                 ) : (
-                    <h2 className="text-2xl font-semibold text-black cursor-pointer" onClick={() => setIsEditing(true)}>
+                    <h2 className="text-2xl font-semibold text-white cursor-pointer hover:text-gray-300 transition-colors" onClick={() => setIsEditing(true)}>
                         {text.length > 0 ? text : "Project Name"}
                     </h2>
                 )}
